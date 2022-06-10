@@ -17,7 +17,7 @@ var_dump($stock);
 //$stock->deleteArticle("03");
 //var_dump($stock);
 
-//$stock->editArticle('03', "pantalon", "30", "6");
+$stock->editArticle('03', "pantalon", "30", "6");
 
 
 //$stock->searchArticleByName("pants");

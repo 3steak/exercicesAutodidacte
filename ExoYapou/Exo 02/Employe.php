@@ -70,7 +70,7 @@ class Employe
     }
     public function setSalaire($salaire)
     {
-        // si mon salaire est > a 1500 
+
         $this->salaire = $salaire;
     }
 
@@ -81,30 +81,50 @@ class Employe
         $date = new DateTime('now', new DateTimeZone('Europe/Paris'));
         // public function diff() retourne la différence entre deux dates 
         $interval = $date->diff($this->dateNaissance);
-        var_dump($interval->y);
         return $interval->y;
     }
 
     // le nombre d'années d'ancienneté de l'employé
     public function anciennete()
     {
+
         $date = new DateTime('now', new DateTimeZone('Europe/Paris'));
         $intervalAnciennete = $date->diff($this->dateEmbauche);
-        var_dump($intervalAnciennete->y);
+        //var_dump($intervalAnciennete->y);
         return $intervalAnciennete->y;
     }
-    /*
-public function AugmentationDuSalaire(){
-// augmente le salaire selon l'ancienneté donc faire appel a Anciennete()
-// Si Anciennete() <5ans . +2%
-// Si Anciennete() <10ans . +5%
-// Si Anciennete() >10ans . +10%
-}
 
-public function AfficherEmploye(){
- Affiche les info de l'employé: 
-- Matricule:[..]
--Nom Complet : [NOM Prenom] ( Le nom en MAJ et Prenom en ucfirst() )
+    public function AugmentationDuSalaire()
+    {
+        // augmente le salaire selon l'ancienneté donc faire appel a Anciennete()
+        // Si Anciennete() <5ans . setSalaire($this-Salaire +2%)
+        if ($this->anciennete() < 5) {
+            // 1.02 correspond a 1 ( le salaire de base) + 0.2 ( les 2%)
+            $this->setSalaire($this->salaire * 1.02);
+            echo 'Le salaire à été augmenté de 2%</br>';
+        }
 
-*/
+        // Si Anciennete() <10ans . +5%
+        if ($this->anciennete() < 10) {
+            $this->setSalaire($this->salaire * 1.05);
+            echo 'Le salaire à été augmenté de 5%</br>';
+        }
+        // Si Anciennete() >10ans . +10%
+        if ($this->anciennete() > 10) {
+            $this->setSalaire($this->salaire * 1.10);
+            echo 'Le salaire à été augmenté de 10%</br>';
+        }
+    }
+
+
+    //Affiche les info de l'employé: 
+    public function AfficherEmploye()
+    {
+
+        echo '- Matricule : [' . $this->matricule . ']</br>';
+        echo '- Nom complet :[' . strtoupper($this->nom) . ' ' . ucfirst($this->prenom) . ']</br>';
+        echo '- Age:[' . $this->age() . ' ans (vieux)]</br>';
+        echo '- Ancienneté:[' . $this->anciennete() . ' ans]</br>';
+        echo '- Salaire:[' . $this->salaire . ']</br>';
+    }
 }

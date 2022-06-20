@@ -39,7 +39,7 @@ let propertyToAccess = "title";
 let bookTitle = myBook[propertyToAccess]; // "L'Histoire de Tao"
 
 
-Les classes
+        Les classes
 
 c'est un modèles pour un objet dans le code
 Elle permet de construire plusieurs objets du même type
@@ -53,7 +53,7 @@ class Book {
     }
 }
 
-// ne fois que la classe est crée, l'on peut créer des instances
+// une fois que la classe est crée, l'on peut créer des instances
 // Grace a " new"
 let myBook = new Book("L'Histoire de Tao", "Will Alexander", 250);
 //Cette ligne crée l'objet suivant :
@@ -80,3 +80,30 @@ episodes.push(firstEpisode, secondEpisode, thirdEpisode, thirdEpisode);
 episodes.pop();
 
 let numberOfEpisodes = episodes.length;
+
+/*
+== ou ===  
+
+        Egalite SIMPLE ou STRICTE
+
+SIMPLE : verifie la VALEUR mais pas le type 
+STRICTE : verifie la VELEUR et le TYPE 
+
+De même pour  != ou !== 
+controle la diff des VALEURS ou la diff des VALEUR et TYPE
+
+
+        La portée de variables :
+
+Les variables déclarées en var ont une portée au delas des blocs 
+--> "function scope" = PORTEE LOCALE
+
+Les constantes const et
+Les variables déclarées en let ont une portée restreinte aux blocs 
+--> "bloc scope" = PORTEE GLOBALE */
+
+
+passager.foreach(function (element) {
+    console.log("embarquement de" + element.name)
+}
+)

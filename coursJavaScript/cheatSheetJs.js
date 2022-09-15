@@ -102,8 +102,23 @@ Les constantes const et
 Les variables déclarées en let ont une portée restreinte aux blocs 
 --> "bloc scope" = PORTEE GLOBALE */
 
-
+// Boucle foreach : 
 passager.foreach(function (element) {
     console.log("embarquement de" + element.name)
 }
 )
+
+// Boucle for... of : ( Pour calculer une moyenne ici )
+let sum = 0;
+// ratings est un tableau de note 
+for (let rating of ratings) {
+    sum += rating;
+}
+
+const randomNumber = Math.random(); // crée un nombre aléatoire sur l'intervalle [0, 1]
+
+const roundMeDown = Math.floor(495.966); // arrondit vers le bas à l'entier le plus proche, renvoie 495
+
+// Fonction fleché :
+
+

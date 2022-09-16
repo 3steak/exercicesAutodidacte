@@ -5,66 +5,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu du restaurant Le Steak</title>
+    <title>Le menu du 3 Steak Restaurant</title>
+    <style>
+        table,
+        td {
+            border: 1px solid #333;
+        }
 
+        thead,
+        tfoot {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 
+
 <body>
-    <h1>Le menu</h1>
-    <h2>Entrées</h2>
-    <ul>
-        <li> <a href="../Restaurant/menu/entree_1.html">Entrée 1</a> </li>
-        <li><a href="../Restaurant/menu/entree_2.html">Entrée 2 </a> </li>
-        <li>Entrée 3</li>
-    </ul>
-    <h2 id="plats-chauds">Plats chauds</h2>
+    <header>
+        <nav>
+
+            <a href="index.html">Acceuil</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html"> Nous contacter</a>
+
+        </nav>
+    </header>
+    <article>
+
+        <h1>Voici le menu</h1>
 
 
-    <table>
-        <thead>
-            <tr>
-                <th>Nom du produit</th>
-                <th>Prix HT</th>
-                <th>Quantité</th>
-                <th>Prix TTC</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Souris</td>
-                <td>30€ </td>
-                <td>2</td>
-                <td>72 €</td>
-            </tr>
-            <tr>
-                <td>Clavier</td>
-                <td>10€</td>
-                <td>5</td>
-                <td>60€</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="2"></td>
-                <th>Total</th>
-                <td>100 €</td>
-            </tr>
-            <tr>
-                <td colspan="2"></td>
-                <th>Total TTC</th>
-                <td>132 €</td>
-            </tr>
-        </tfoot>
-    </table>
-    <ul>
-        <p></p>
-        <li>Plat 1</li>
-        <li>Plat 2</li>
-        <li>Plat 3</li>
-    </ul>
-    <p>
-        <a href="../Restaurant/index.html">Revenir à l'acceuil</a>
-    </p>
+        <div>
+            <table>
+                <tr>
+                    <th colspan="3">Plats chauds</th>
+                </tr>
+                <tr>
+                    <th>Plats</th>
+                    <th>Ingredients</th>
+                    <th>Prix</th>
+                </tr>
+
+                <tr>
+                    <td>Steak</td>
+                    <td>Un steak de 200g</td>
+                    <td>5 €</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Desserts</th>
+                </tr>
+                <tr>
+                    <th>Glaces</th>
+                    <th>Ingredients</th>
+                    <th>Prix</th>
+                </tr>
+
+                <tr>
+                    <td> 1 Boule</td>
+                    <td>Une bonne boule</td>
+                    <td>2 €</td>
+                </tr>
+                <tr>
+                    <td> 2 Boules</td>
+                    <td>Deux bonnes boules</td>
+                    <td>4 €</td>
+                </tr>
+                <tr>
+                    <th>Crêpes</th>
+                    <th>Ingredients</th>
+                    <th>Prix</th>
+                </tr>
+
+                <tr>
+                    <td> Caramel</td>
+                    <td>Caramel beurre salé</td>
+                    <td>2 €</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <a href="index.html">Retourner à la page d'acceuil</a>
+        </div>
+    </article>
+    <footer>
+        <div><a href="contact.html">Nous contacter</a></div>
+    </footer>
 </body>
 
 </html>

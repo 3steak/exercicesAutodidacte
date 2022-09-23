@@ -162,20 +162,10 @@ html {
 }
 
 .article-img:hover {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1);
 }
 
-@keyframes slideDown {
-    from {
-        transform: translateY(200px);
-        opacity: 0;
-    }
 
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
 .banniere {
     height: 427px;
@@ -202,4 +192,47 @@ html {
 
 .footer {
     clear: both;
+}
+
+@media screen and (max-width:1100px) {
+    .body {
+        display: block;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:740px) {
+    .article {
+        padding-left: 0;
+    }
+
+    .article-img {
+        position: static;
+        margin-bottom: 1rem;
+        width: 100%;
+        display: block;
+    }
+}
+
+@media screen and (max-width:860px) {
+
+    .topbar nav,
+    .social {
+        float: none;
+        text-align: center;
+    }
+
+    .topbar nav a {
+        display: inline-block;
+        margin: 0 20px;
+        white-space: nowrap;
+    }
+
 }

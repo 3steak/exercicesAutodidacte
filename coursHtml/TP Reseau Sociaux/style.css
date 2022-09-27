@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F1F1F1;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: rgb(0, 0, 0, 0.6);
+    line-height: 20px;
+}
+
+a {
+    color: inherit;
+    /* la couleur est herité de l'élement parent */
+}
+
+.topbar {
+    background: #2C3E50;
+    color: white;
+
+}
+
+.topbar a {
+    text-decoration: none;
+}
+
+.topbar-logo {
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    padding: 16px 0;
+
+}
+
+.topbar-nav {
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+.topbar-nav a {
+    display: inline-block;
+
+    margin: 0 12px;
+    color: rgba(255, 255, 255, 0.67);
+    transition: color .3s;
+}
+
+.topbar-nav a:hover {
+    color: #F1F1F1;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100vw;
+    /* 100% du viewport width */
+
+}
+
+.sidebar {
+    display: block;
+    columns: 2;
+    font-size: 12px;
+
+}
+
+
+
+.sidebar a {
+    text-decoration: none;
+    width: 180px;
+    height: 20px;
+}
+
+a {
+    align-items: center;
+    text-decoration: none;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.sidebar a:hover {
+    background: #FFFFFF;
+    color: black;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.main {
+    display: ;
+}
+
+@media only screen and (min-width: 520px) {
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /*aligne verticalement */
+        height: 64px;
+        padding: 0 25px;
+
+    }
+
+    .topbar-logo,
+    .topbar-nav {
+        padding: 0;
+    }
+
+    .topbar-nav a {
+        margin: 0 20px;
+    }
+
+
+
+}

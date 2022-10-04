@@ -74,7 +74,10 @@ a {
 .sidebar {
     display: flex;
     flex-wrap: wrap;
-    background: gold;
+
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 100%;
 }
 
 
@@ -144,14 +147,10 @@ a {
     margin-left: 30px;
     margin-right: 30px;
     width: 100%;
-    background: blue;
 
 }
 
-.aside {
-    background: grey;
 
-}
 
 @media only screen and (min-width: 520px) {
     .topbar {
@@ -174,18 +173,26 @@ a {
     }
 }
 
-@media only screen and (min-width: 950px) {
-    .container {
+@media only screen and (min-width: 1080px) {
+    .site {
         display: flex;
     }
 
     .sidebar {
         width: 180px;
+        flex: none;
         display: flex;
         flex-direction: column;
     }
 
+    .main {
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 30px
+    }
+
     .aside {
+        flex: none;
         width: 310px;
     }
 

@@ -27,6 +27,7 @@ a {
     background: #2C3E50;
     color: white;
 
+
 }
 
 .topbar a {
@@ -143,7 +144,7 @@ a {
 a {
     align-items: center;
     text-decoration: none;
-    padding: 8px 10px;
+
     display: flex;
     align-items: center;
     column-gap: 20px;
@@ -154,7 +155,11 @@ a {
     margin-left: 30px;
     margin-right: 30px;
     width: 100%;
+    margin-bottom: 20px;
+}
 
+.profil {
+    display: none;
 }
 
 .card {
@@ -162,6 +167,7 @@ a {
     background: #FFFFFF;
     border-radius: 5px;
     margin-bottom: 15px;
+
 }
 
 .card:last-child {
@@ -255,6 +261,49 @@ a {
     margin-left: auto;
 }
 
+.friend {
+    margin: 14px 0;
+    display: flex;
+}
+
+.friend-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.friend-avatar {
+    width: 73px;
+    height: 73px;
+    flex: none;
+    margin-right: 10px;
+}
+
+.friend-name {
+    display: block;
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
+
+}
+
+.friend-add {
+    font-size: 12px;
+    color: black;
+    margin-top: auto;
+}
+
+.friend-add::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 13px;
+    background: center center /18px 13px no-repeat url(img/ajouterami.svg);
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+
 @media only screen and (min-width: 520px) {
     .topbar {
         display: flex;
@@ -266,6 +315,10 @@ a {
 
     }
 
+    .profil {
+        display: block;
+    }
+
     .topbar-logo,
     .topbar-nav {
         padding: 0;
@@ -274,6 +327,27 @@ a {
     .topbar-nav a {
         margin: 0 20px;
     }
+
+
+    .sidebar-title {
+        color: black;
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 18px;
+    }
+
+    .sidebar-title::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        margin-top: 4px;
+        background: black;
+    }
+
+
+
 }
 
 @media only screen and (min-width: 1080px) {
@@ -286,6 +360,7 @@ a {
         flex: none;
         display: block;
     }
+
 
     .sidebar a {
         width: 100%;
@@ -304,7 +379,5 @@ a {
         flex: none;
         width: 310px;
     }
-
-
 
 }
